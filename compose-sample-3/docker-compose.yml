@@ -6,8 +6,9 @@ version: '2'
 services:
   proxy:
     build:
-      context: .
-      dockerfile: nginx.Dockerfile
+      context: .                      # pwd the current directory
+      dockerfile: nginx.Dockerfile    # the Dockerfile name put it here. to build from it
+      image: nginx-custom             # the name of image will create.
     ports:
       - '80:80'
   web:
